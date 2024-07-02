@@ -153,7 +153,7 @@ const models = [
       "• Speech recognition",
       "• Time series prediction"
     ],
-    image: "/RNN.webp"
+    image: "https://github.com/md-experiments/ai-dashboard/blob/main/public/RNN.webp"
   },
   {
     id: 'lstm',
@@ -184,7 +184,7 @@ const models = [
       "• Sentiment analysis",
       "• Music generation"
     ],
-    image: "/LSTM.jpg"
+    image: "https://github.com/md-experiments/ai-dashboard/blob/main/public/LSTM.jpg"
   },
   {
     id: 'transformers',
@@ -218,7 +218,7 @@ const models = [
       "• Image recognition (Vision Transformer)",
       "• Speech recognition and synthesis"
     ],
-    image: "/Transformer.webp"
+    image: "https://github.com/md-experiments/ai-dashboard/blob/main/public/Transformer.webp"
   }
 ];
 
@@ -257,7 +257,7 @@ const SequenceModelsDashboard = () => {
   return (
     <Box sx={{ p: 4 }}>
       <Typography variant="h4" component="h1" gutterBottom>
-        Sequence-based Deep Learning Models: Technical Overview
+        ML Algorithms and Sequence-based Deep Learning Models: Technical Overview
       </Typography>
       <Tabs value={activeTab} onChange={handleChange} aria-label="model tabs">
         {models.map((model, index) => (
