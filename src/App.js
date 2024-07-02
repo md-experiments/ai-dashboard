@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Card, CardContent } from '@/components/ui/card';
+import { Tabs, Tab, Box, Typography, Card, CardContent } from '@mui/material';
 
 const models = [
   {
@@ -31,7 +30,8 @@ const models = [
       "• Language modeling",
       "• Speech recognition",
       "• Time series prediction"
-    ]
+    ],
+    image: "/api/placeholder/600/300"
   },
   {
     id: 'lstm',
@@ -61,7 +61,8 @@ const models = [
       "• Machine translation",
       "• Sentiment analysis",
       "• Music generation"
-    ]
+    ],
+    image: "/api/placeholder/600/300"
   },
   {
     id: 'transformers',
@@ -94,50 +95,72 @@ const models = [
       "• Natural language processing tasks (translation, summarization, question answering)",
       "• Image recognition (Vision Transformer)",
       "• Speech recognition and synthesis"
-    ]
+    ],
+    image: "/api/placeholder/600/800"
   }
 ];
 
-const ModelContent = ({ content }) => (
-  <Card className="mt-4">
-    <CardContent className="p-4">
-      <ul className="space-y-2">
-        {content.map((point, index) => (
-          <li key={index} className="text-sm">
-            {point.startsWith('•') ? (
-              <ul className="list-disc pl-5">
-                <li>{point.slice(2)}</li>
-              </ul>
-            ) : (
-              point
-            )}
-          </li>
-        ))}
-      </ul>
-    </CardContent>
-  </Card>
+const ModelContent = ({ content, image }) => (
+  <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4 }}>
+    <Card sx={{ flex: 1 }}>
+      <CardContent>
+        <ul style={{ paddingLeft: '20px' }}>
+          {content.map((point, index) => (
+            <li key={index} style={{ fontSize: '0.9rem', marginBottom: '8px' }}>
+              {point.startsWith('•') ? (
+                <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
+                  <li>{point.slice(2)}</li>
+                </ul>
+              ) : (
+                point
+              )}
+            </li>
+          ))}
+        </ul>
+      </CardContent>
+    </Card>
+    <Box sx={{ flex: 1 }}>
+      <img src={image} alt="Model architecture" style={{ width: '100%', height: 'auto' }} />
+    </Box>
+  </Box>
 );
 
 const SequenceModelsDashboard = () => {
-  const [activeTab, setActiveTab] = useState("rnn");
+  const [activeTab, setActiveTab] = useState(0);
+
+  const handleChange = (event, newValue) => {
+    setActiveTab(newValue);
+  };
 
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Sequence-based Deep Learning Models: Technical Overview</h1>
-      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-        <TabsList className="grid w-full grid-cols-3">
-          {models.map((model) => (
-            <TabsTrigger key={model.id} value={model.id}>{model.name}</TabsTrigger>
-          ))}
-        </TabsList>
-        {models.map((model) => (
-          <TabsContent key={model.id} value={model.id}>
-            <h2 className="text-xl font-semibold mb-2">{model.name}</h2>
-            <ModelContent content={model.content} />
-          </TabsContent>
+    <Box sx={{ p: 4 }}>
+      <Typography variant="h4" component="h1" gutterBottom>
+        Sequence-based Deep Learning Models: Technical Overview
+      </Typography>
+      <Tabs value={activeTab} onChange={handleChange} aria-label="model tabs">
+        {models.map((model, index) => (
+          <Tab key={model.id} label={model.name} id={`tab-${index}`} aria-controls={`tabpanel-${index}`} />
         ))}
       </Tabs>
-    </div>
+      {models.map((model, index) => (
+        <div
+          key={model.id}
+          role="tabpanel"
+          hidden={activeTab !== index}
+          id={`tabpanel-${index}`}
+          aria-labelledby={`tab-${index}`}
+        >
+          {activeTab === index && (
+            <Box sx={{ py: 3 }}>
+              <Typography variant="h5" component="h2" gutterBottom>
+                {model.name}
+              </Typography>
+              <ModelContent content={model.content} image={model.image} />
+            </Box>
+          )}
+        </div>
+      ))}
+    </Box>
   );
 };
 
