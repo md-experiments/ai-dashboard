@@ -31,7 +31,7 @@ const models = [
       "• Speech recognition",
       "• Time series prediction"
     ],
-    image: "/api/placeholder/600/300"
+    image: "/RNN.webp"
   },
   {
     id: 'lstm',
@@ -62,7 +62,7 @@ const models = [
       "• Sentiment analysis",
       "• Music generation"
     ],
-    image: "/api/placeholder/600/300"
+    image: "/LSTM.jpg"
   },
   {
     id: 'transformers',
@@ -96,7 +96,7 @@ const models = [
       "• Image recognition (Vision Transformer)",
       "• Speech recognition and synthesis"
     ],
-    image: "/api/placeholder/600/800"
+    image: "/Transformer.webp"
   }
 ];
 
