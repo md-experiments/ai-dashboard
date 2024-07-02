@@ -153,7 +153,7 @@ const models = [
       "• Speech recognition",
       "• Time series prediction"
     ],
-    image: "./RNN.webp"
+    image: "/RNN.webp"
   },
   {
     id: 'lstm',
@@ -184,7 +184,7 @@ const models = [
       "• Sentiment analysis",
       "• Music generation"
     ],
-    image: "./LSTM.jpg"
+    image: "/LSTM.jpg"
   },
   {
     id: 'transformers',
