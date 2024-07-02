@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Tabs, Tab, Box, Typography, Card, CardContent } from '@mui/material';
+import transformer from './transformer.webp';
+import imgNN from './NN.png';
+import imgSVM from './SVM.PNG';
 
 const models = [
   {
@@ -28,7 +31,8 @@ const models = [
       "Weight update formula: w_new = w_old - η * ∂L/∂w",
       "where η is the learning rate and ∂L/∂w is the gradient of the loss with respect to the weight",
       "Deep learning involves neural networks with many hidden layers, enabling the learning of complex hierarchical features"
-    ]
+    ],
+    image: {imgNN}
   },
   {
     id: 'svm',
@@ -57,7 +61,8 @@ const models = [
       "Subject to: y_i(w^T x_i + b) ≥ 1 - ξ_i and ξ_i ≥ 0 for all i",
       "where C is the regularization parameter and ξ_i are slack variables",
       "SVMs can be extended to multi-class classification using one-vs-rest or one-vs-one strategies"
-    ]
+    ],
+    image: {imgSVM}
   },
   {
     id: 'kmeans',
@@ -84,7 +89,8 @@ const models = [
       "• K-means++: Improves initial centroid selection",
       "• Mini-batch K-means: Uses subsets of data for faster processing on large datasets",
       "Distance metric is typically Euclidean, but other metrics can be used for specific applications"
-    ]
+    ],
+    image: "https://github.com/md-experiments/ai-dashboard/blob/main/public/RNN.webp"
   },
   {
     id: 'reinforcement-learning',
@@ -122,7 +128,8 @@ const models = [
       "• Credit assignment problem: Determining which actions led to rewards",
       "• Sample efficiency: Learning from limited interactions",
       "• Stability and convergence issues in function approximation methods"
-    ]
+    ],
+    image: "https://github.com/md-experiments/ai-dashboard/blob/main/public/RNN.webp"
   },
   {
     id: 'rnn',
@@ -184,7 +191,7 @@ const models = [
       "• Sentiment analysis",
       "• Music generation"
     ],
-    image: "https://github.com/md-experiments/ai-dashboard/blob/main/public/LSTM.jpg"
+    image: "/LSTM.jpg"
   },
   {
     id: 'transformers',
@@ -218,7 +225,7 @@ const models = [
       "• Image recognition (Vision Transformer)",
       "• Speech recognition and synthesis"
     ],
-    image: "https://github.com/md-experiments/ai-dashboard/blob/main/public/Transformer.webp"
+    image: {transformer}
   }
 ];
 
