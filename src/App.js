@@ -3,7 +3,7 @@ import { Tabs, Tab, Box, Typography, Card, CardContent } from '@mui/material';
 import imgTransformer from './Transformer.webp';
 import imgNN from './NN.png';
 import imgSVM from './SVM.PNG';
-import imgKMeans from './Kmeans.gif';
+import imgKMeans from './KMeans.jpg';
 import imgRNN from './RNN.webp';
 import imgLSTM from './LSTM.jpg';
 import imgRL from './RL.webp';
