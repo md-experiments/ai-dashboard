@@ -218,7 +218,7 @@ const models = [
       "• Image recognition (Vision Transformer)",
       "• Speech recognition and synthesis"
     ],
-    image: "./Transformer.webp"
+    image: "/Transformer.webp"
   }
 ];
 
@@ -226,19 +226,19 @@ const ModelContent = ({ content, image }) => (
   <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4 }}>
     <Card sx={{ flex: 1 }}>
       <CardContent>
-        <ul style={{ paddingLeft: '20px' }}>
+        <Box component="ul" sx={{ listStyleType: 'none', paddingLeft: 0 }}>
           {content.map((point, index) => (
-            <li key={index} style={{ fontSize: '0.9rem', marginBottom: '8px' }}>
+            <Box component="li" key={index} sx={{ fontSize: '0.9rem', marginBottom: '8px' }}>
               {point.startsWith('•') ? (
-                <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
+                <Box component="ul" sx={{ listStyleType: 'disc', paddingLeft: '20px' }}>
                   <li>{point.slice(2)}</li>
-                </ul>
+                </Box>
               ) : (
                 point
               )}
-            </li>
+            </Box>
           ))}
-        </ul>
+        </Box>
       </CardContent>
     </Card>
     <Box sx={{ flex: 1 }}>
