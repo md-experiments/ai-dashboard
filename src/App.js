@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { Tabs, Tab, Box, Typography, Card, CardContent } from '@mui/material';
-import transformer from './transformer.webp';
+import imgTransformer from './Transformer.webp';
 import imgNN from './NN.png';
 import imgSVM from './SVM.PNG';
+import imgKMeans from './Kmeans.gif';
+import imgRNN from './RNN.webp';
+import imgLSTM from './LSTM.jpg';
+import imgRL from './RL.webp';
 
 const models = [
   {
@@ -32,7 +36,7 @@ const models = [
       "where η is the learning rate and ∂L/∂w is the gradient of the loss with respect to the weight",
       "Deep learning involves neural networks with many hidden layers, enabling the learning of complex hierarchical features"
     ],
-    image: {imgNN}
+    image: imgNN
   },
   {
     id: 'svm',
@@ -62,7 +66,7 @@ const models = [
       "where C is the regularization parameter and ξ_i are slack variables",
       "SVMs can be extended to multi-class classification using one-vs-rest or one-vs-one strategies"
     ],
-    image: {imgSVM}
+    image: imgSVM
   },
   {
     id: 'kmeans',
@@ -90,7 +94,7 @@ const models = [
       "• Mini-batch K-means: Uses subsets of data for faster processing on large datasets",
       "Distance metric is typically Euclidean, but other metrics can be used for specific applications"
     ],
-    image: "https://github.com/md-experiments/ai-dashboard/blob/main/public/RNN.webp"
+    image: imgKMeans
   },
   {
     id: 'reinforcement-learning',
@@ -129,7 +133,7 @@ const models = [
       "• Sample efficiency: Learning from limited interactions",
       "• Stability and convergence issues in function approximation methods"
     ],
-    image: "https://github.com/md-experiments/ai-dashboard/blob/main/public/RNN.webp"
+    image: imgRL
   },
   {
     id: 'rnn',
@@ -160,7 +164,7 @@ const models = [
       "• Speech recognition",
       "• Time series prediction"
     ],
-    image: "https://github.com/md-experiments/ai-dashboard/blob/main/public/RNN.webp"
+    image: imgRNN
   },
   {
     id: 'lstm',
@@ -191,7 +195,7 @@ const models = [
       "• Sentiment analysis",
       "• Music generation"
     ],
-    image: "/LSTM.jpg"
+    image: imgLSTM
   },
   {
     id: 'transformers',
@@ -225,7 +229,7 @@ const models = [
       "• Image recognition (Vision Transformer)",
       "• Speech recognition and synthesis"
     ],
-    image: {transformer}
+    image: imgTransformer
   }
 ];
 
