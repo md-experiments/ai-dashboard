@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ai-dashboard/static/css/main.74f7b3c0.css",
-    "main.js": "/ai-dashboard/static/js/main.e880cf32.js",
+    "main.js": "/ai-dashboard/static/js/main.42f5c03c.js",
     "static/js/453.bba35901.chunk.js": "/ai-dashboard/static/js/453.bba35901.chunk.js",
     "static/media/LSTM.jpg": "/ai-dashboard/static/media/LSTM.64ce6c72d2d23486421a.jpg",
     "static/media/NN.png": "/ai-dashboard/static/media/NN.7723d07eb2a5ff374aef.png",
@@ -72,11 +72,11 @@
     "static/media/KaTeX_Size3-Regular.woff2": "/ai-dashboard/static/media/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2",
     "index.html": "/ai-dashboard/index.html",
     "main.74f7b3c0.css.map": "/ai-dashboard/static/css/main.74f7b3c0.css.map",
-    "main.e880cf32.js.map": "/ai-dashboard/static/js/main.e880cf32.js.map",
+    "main.42f5c03c.js.map": "/ai-dashboard/static/js/main.42f5c03c.js.map",
     "453.bba35901.chunk.js.map": "/ai-dashboard/static/js/453.bba35901.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.74f7b3c0.css",
-    "static/js/main.e880cf32.js"
+    "static/js/main.42f5c03c.js"
   ]
 }
