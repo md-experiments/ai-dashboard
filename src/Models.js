@@ -42,9 +42,9 @@ const models = [
   },
   {
     id: 'svm',
-    name: 'Support Vector Machines (SVM)',
+    name: 'SVM',
     content: [
-      "SVMs are powerful supervised learning models used for classification and regression tasks.",
+      "SVMs (Support Vector Machines) are powerful supervised learning models used for classification and regression tasks.",
       "Key concept: Find the hyperplane that best separates classes in high-dimensional space.",
       "For linearly separable data:",
       "• Objective: Maximize the margin between classes",
@@ -100,7 +100,7 @@ const models = [
   },
   {
     id: 'reinforcement-learning',
-    name: 'Reinforcement Learning',
+    name: 'RL',
     content: [
       "Reinforcement Learning (RL) is a type of machine learning where an agent learns to make decisions by interacting with an environment.",
       "Key components:",
@@ -139,9 +139,9 @@ const models = [
   },
   {
     id: 'rnn',
-    name: 'Recurrent Neural Networks (RNN)',
+    name: 'RNNs',
     content: [
-      "RNNs are designed to work with sequence data by maintaining a hidden state that captures information from previous time steps.",
+      "RNNs (Recurrent Neural Networks) are designed to work with sequence data by maintaining a hidden state that captures information from previous time steps.",
       "Basic RNN architecture:",
       { type: 'formula', content: 'h_t = \\tanh(W_{hh} h_{t-1} + W_{xh} x_t + b_h)' },
       { type: 'formula', content: 'y_t = W_{hy} h_t + b_y' },
@@ -170,9 +170,9 @@ const models = [
   },
   {
     id: 'lstm',
-    name: 'Long Short-Term Memory (LSTM)',
+    name: 'LSTM',
     content: [
-      "LSTMs are a type of RNN designed to overcome the vanishing gradient problem and better capture long-term dependencies.",
+      "LSTMs (Long-Short Term Memory Networks) are a type of RNN designed to overcome the vanishing gradient problem and better capture long-term dependencies.",
       "LSTM cell architecture consists of three gates: forget gate, input gate, and output gate.",
       "Key equations:",
       { type: 'formula', content: 'f_t = \\sigma(W_f \\cdot [h_{t-1}, x_t] + b_f)' },
